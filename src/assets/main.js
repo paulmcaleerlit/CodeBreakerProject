@@ -14,3 +14,5 @@ function setHiddenFields(){
     }
     answer = stringNumber;
 };
+
+setHiddenFields();
