@@ -84,7 +84,7 @@ function charInString(char, string){
 
 function showAnswer(win){
   let code = document.getElementById('code');
-  code.innerhtml = answer.value;
+  code.innerHTML = answer.value;
   if(win){
     code.className += " success";
   } else {
