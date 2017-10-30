@@ -38,6 +38,7 @@ function validateInput(input){
 }
 
 function getResults(input){
+  var correctGuesses = 0;
   let results = document.getElementById('results');
   var output = results.innerHTML;
   output += '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
@@ -45,6 +46,7 @@ function getResults(input){
     if(input.charAt(i) == answer.value.charAt(i)){
       // Correct Position
       output += '<span class="glyphicon glyphicon-ok"></span>';
+      correctGuesses++;
     } else if (charInString(input.charAt(i), answer.value)){
       // Wrong Position
       output += '<span class="glyphicon glyphicon-transfer"></span>';
@@ -55,6 +57,10 @@ function getResults(input){
   }
   output+= '</div></div>';
   results.innerHTML = output;
+  if(correctGuesses == input.length){
+    return true;
+  }
+  return false;
 }
 
 function charInString(char, string){
