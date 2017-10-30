@@ -5,8 +5,8 @@ function guess() {
     let input = document.getElementById('user-guess');
     if(answer.value == ""){
       setHiddenFields();
-    };
-};
+    }
+}
 
 function setHiddenFields(){
     var randomNumber = Math.floor(Math.random() * 10000);
@@ -16,12 +16,12 @@ function setHiddenFields(){
     }
     answer.value = stringNumber;
     attempt.value = 0;
-};
+}
 
 function setMessage(message){
   let messageLabel = document.getElementById('message');
   messageLabel.innerHTML = message;
-};
+}
 
 function validateInput(input){
   if(input.length==4){
@@ -29,4 +29,4 @@ function validateInput(input){
   }
   setMessage("Guesses must be exactly 4 characters long.");
   return false;
-};
+}
