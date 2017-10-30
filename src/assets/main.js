@@ -6,6 +6,12 @@ function guess() {
     if(answer.value == ""){
       setHiddenFields();
     }
+
+    if(!validateInput(input.value)){
+      return false;
+    } else {
+      attempt.value++;
+    }
 }
 
 function setHiddenFields(){
