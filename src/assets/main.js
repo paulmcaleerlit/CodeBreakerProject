@@ -19,3 +19,8 @@ function setHiddenFields(){
     answer.value = stringNumber;
     attempt.value = 0;
 };
+
+function setMessage(var message){
+  let messageLabel = document.getElementById('message');
+  messageLabel.innerHTML = message;
+};
