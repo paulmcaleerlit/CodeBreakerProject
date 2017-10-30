@@ -8,7 +8,7 @@ function guess() {
     };
 
     //add functionality to guess function here
-}
+};
 
 function setHiddenFields(){
     var randomNumber = Math.floor(Math.random() * 10000);
