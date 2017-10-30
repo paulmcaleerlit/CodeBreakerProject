@@ -12,6 +12,17 @@ function guess() {
     } else {
       attempt.value++;
     }
+
+    if(getResults(input.value)){
+      setMessage("You Win! :)");
+    } else {
+      if(atempt.value >= 10){
+        setMessage("You Lose! :(");
+      } else {
+        setMessage("Incorrect, try again.");
+      }
+
+    }
 }
 
 function setHiddenFields(){
