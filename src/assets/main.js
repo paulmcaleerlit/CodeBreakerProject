@@ -6,9 +6,7 @@ function guess() {
     if(answer.value == ""){
       setHiddenFields();
     };
-
-    //add functionality to guess function here
-}
+};
 
 function setHiddenFields(){
     var randomNumber = Math.floor(Math.random() * 10000);
@@ -18,4 +16,9 @@ function setHiddenFields(){
     }
     answer.value = stringNumber;
     attempt.value = 0;
+};
+
+function setMessage(message){
+  let messageLabel = document.getElementById('message');
+  messageLabel.innerHTML = message;
 };
