@@ -81,3 +81,13 @@ function charInString(char, string){
   }
   return false;
 }
+
+function showAnswer(win){
+  let code = document.getElementById('code');
+  code.innerhtml = answer.value;
+  if(win){
+    code.className += " success";
+  } else {
+    code.className += " failure";
+  }
+}
